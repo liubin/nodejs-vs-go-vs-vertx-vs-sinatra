@@ -8,25 +8,23 @@ import (
     "time"
 )
 
-func Hello1(w http.ResponseWriter, req *http.Request) {
+func Hello(w http.ResponseWriter, req *http.Request) {
+
+    s := fmt.Sprintf("%d", time.Now().Unix())
 
     h := md5.New()
-    h.Write([]byte("1234"))
+    h.Write([]byte(s))
 
     x := h.Sum(nil)
 
     y := make([]byte, 32)
+
     hex.Encode(y, x)
 
+    w.Header().Set("Content-Type", "text/plain")
     w.Write([]byte(y))
 }
 
-func Hello(w http.ResponseWriter, req *http.Request) {
-  x := time.Now().Unix()
-  s := fmt.Sprintf("%d", x)
-  // TODO: add content-type
-  w.Write([]byte(s))
-}
 func main() {
     http.HandleFunc("/", Hello)
 
