@@ -83,4 +83,8 @@ Longest transaction:	        0.22
 Shortest transaction:	        0.00  
 
 ####Sumary:
-
+>      Date & Time,  Trans,  Elap Time,  Data Trans,  Resp Time,  Trans Rate,  Throughput,  Concurrent,    OKAY,   Failed  
+Nodejs, 140710,      59.13,           4,       0.03,     2379.67,        0.07,       82.92,  140710,       0  
+Vert.x,  91090,      27.46,           2,       0.03,     3317.19,        0.07,       95.78,   91090,    1047  
+Go, 128220,      59.28,           3,       0.05,     2162.96,        0.05,       99.88,  128220,       0  
+Sinatra,  93859,      59.59,           2,       0.06,     1575.08,        0.03,       99.74,   93859,       0  
